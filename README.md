@@ -13,4 +13,4 @@ To get started you need to create a google service account at this [url](https:/
 
 ## LICENSE
 
-MIT
+[MIT](./LICENSE)
