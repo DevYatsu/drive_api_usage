@@ -10,3 +10,7 @@ To get started you need to create a google service account at this [url](https:/
 2. Create a service account
 3. Create a json key for the service account
 4. Add the path of the json key to SERVICE_ACCOUNT_KEY_FILE local variable
+
+## LICENSE
+
+MIT
