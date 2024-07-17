@@ -1,0 +1,19 @@
+{
+  "name": "drive_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "Yatsu",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "gdrive-node-uploader": "^1.2.4",
+    "googleapis": "^140.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
