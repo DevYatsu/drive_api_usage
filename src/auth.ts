@@ -18,6 +18,30 @@ export async function getAuthClient(scopes: string[]) {
   return authClient;
 }
 
+// if needed directly get the CLient without a keyFile but with a
+export async function getOAuth2Client(scopes: string[]) {
+  if (
+    !process.env.CLIENT_ID ||
+    !process.env.CLIENT_SECRET ||
+    !process.env.REDIRECT_URL
+  ) {
+    throw new Error(
+      "CLIENT_ID, CLIENT_SECRET or/and REDIRECT_URL env variables are not defined."
+    );
+  }
+  const oauth2Client = new google.auth.OAuth2(
+    process.env.CLIENT_ID,
+    process.env.CLIENT_SECRET,
+    process.env.REDIRECT_URL
+  );
+
+  google.options({
+    auth: oauth2Client,
+  });
+
+  return oauth2Client;
+}
+
 export async function getMetadataDrive() {
   const client = await getAuthClient([SCOPES.METADATA_ONLY]);
 
